@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<link href="assets/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="bg-blue-600">
+		<h1 class="text-center font-bold text-3xl text-white py-5">Bookshelf App</h1>
+	</div>
+  	<div class="container mx-auto row">
+  		<div class="grid md:grid-cols-2 grid-cols-1 gap-4 mx-3">
+	  		<div class="border my-3 px-2 py-4">
+	  			<label class="font-bold font-lg">Judul Buku</label>
+	  			<input type="text" name="title" id="title" class="border w-full p-2 mt-2" placeholder="Masukkan Judul Buku">
+	  			<p class="text-red-500 text-sm text-right mt-2 hidden">Harus diisi, maksimal 100 karakter</p>
+	  			<br>
+	  			<label class="font-bold font-lg mt-3">Nama Penulis</label>
+	  			<input type="text" name="writer" id="writer" class="border w-full p-2 mt-2" placeholder="Masukkan Nama Penulis">
+	  			<p class="text-red-500 text-sm text-right mt-2 hidden">Harus diisi, maksimal 100 karakter</p>
+	  			<br>
+	  			<label class="font-bold font-lg mt-3">Tahun Penerbitan</label>
+	  			<input type="text" name="year" id="year" class="border w-full p-2 mt-2" placeholder="Masukkan Tahun Penerbitan Buku">
+	  			<p class="text-red-500 text-sm text-right mt-2 hidden">Harus diisi, maksimal 4 karakter</p>
+	  			<br>
+	  			<div class="grid md:grid-cols-2 grid-cols-1 mb-2">
+	  				<div>
+	  					<label class="font-bold font-lg mt-2">Jumlah Halaman</label>
+	  					<input type="number" name="pages_total" id="pages_total" class="border w-full p-2 mt-2" placeholder="Jumlah Halaman">	
+	  				</div>
+	  				<div>
+	  					<label class="font-bold font-lg mt-2">Telah Dibaca</label>
+	  					<input type="number" name="pages_readed" id="pages_readed" class="border w-full p-2 mt-2" placeholder="Halaman Yang Telah Dibaca">	
+	  				</div>
+	  			</div>
+	  			<input type="checkbox" class="m-1" id="isReaded">
+	  			<label for="isReaded">Selesai dibaca</label>
+	  			<button type="button" name="button_addbook" id="button_addbook" class="w-full py-3 bg-blue-600 text-white rounded-md mt-4 font-bold">Tambahkan ke daftar</button>
+	  		</div>
+  			<div class="border my-3 px-2 py-4">
+  				<h2 class="font-bold text-lg text-center mb-3">Cari Buku</h2>
+  				<div class="mb-4">
+  					<input type="text" name="bookToFind" id="bookToFind" class="w-full mr-1 py-2 px-4 border" placeholder="Masukkan judul atau nama penulis disini">
+  				</div>
+  				<div id="findBookBlock"></div>
+  				<hr>
+  				<h2 class="font-bold text-lg my-3 mx-2">Belum Dibaca</h2>
+  				<div class="mx-2 my-3" id="notReadedList">
+  				</div>
+  				<hr>
+  				<h2 class="font-bold text-lg my-3 mx-2">Telah Selesai Dibaca</h2>
+  				<div class="mx-2 my-3" id="readedList">
+  				</div>
+  			</div>
+  		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
